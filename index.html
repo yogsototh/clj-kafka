@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>clj-kafka.core - clj-kafka API documentation</title>
+    <title>Overview - clj-kafka API documentation</title>
     <link href="static/favicon.png" rel="icon" />
     <link href="static/favicon.png" rel="shortcut icon" />
     <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
@@ -32,7 +32,12 @@ namespace.
       <li><a class="wiki_link" href="index.html">Overview</a></li>
       <li><a class="wiki_link" href="api-index.html">API Index</a></li>
     </ul>
-    
+    <div class="NamespaceTOC">
+      <span class="toc-header">Namespaces</span>
+      <ul id="left-sidebar-list">
+        <li><a href="clj-kafka.consumer.simple-api.html" class="wiki_link">clj-kafka.consumer.simple</a></li><li><a href="clj-kafka.consumer.zk-api.html" class="wiki_link">clj-kafka.consumer.zk</a></li><li><a href="clj-kafka.core-api.html" class="wiki_link">clj-kafka.core</a></li><li><a href="clj-kafka.producer-api.html" class="wiki_link">clj-kafka.producer</a></li>
+      </ul>
+    </div>
     
     <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
   </div>
@@ -45,86 +50,81 @@ namespace.
                 <div id="right-sidebar"><div id="toc">
   <h1 class="nopad">Table of Contents</h1>
   <div style="margin-left: 1em;" class="toc-section">
-    <a href="#toc0">Overview</a>
-    <div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-kafka.core/create-consumer">create-consumer</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-kafka.core/fetch">fetch</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-kafka.core/messages">messages</a>
-    </div><div style="margin-left: 1em;" class="toc-entry">
-      <a href="#clj-kafka.core/to-clojure">to-clojure</a>
-    </div>
+    <a href="#clj-kafka.consumer.simple">clj-kafka.consumer.simple</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clj-kafka.consumer.zk">clj-kafka.consumer.zk</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clj-kafka.core">clj-kafka.core</a>
+    
+    <br />
+  </div><div style="margin-left: 1em;" class="toc-section">
+    <a href="#clj-kafka.producer">clj-kafka.producer</a>
+    
     <br />
   </div>
 </div>
 </div>
-                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">clj-kafka.core</span>
-  - <span id="header-project">clj-kafka</span> <span id="header-version"></span>
-  </h1>
-
-<br />Full namespace name: <span id="long-name">clj-kafka.core</span>
-<p></p>
-<h2>Overview</h2>
-<pre id="namespace-docstr"></pre>
-
-
+                <div id="content-tag"><h1 id="toc0">API Overview - <span id="header-project">clj-kafka</span> <span id="header-version"></span></h1>
 <br />
-<h2>Public Variables and Functions</h2>
-<div id="var-entry">
+<div id="project-description">Clojure wrapper for Kafka's Java API</div>
+<br />
+<div id="namespace-entry">
   <br />
   <hr />
-  <h2 id="clj-kafka.core/create-consumer">create-consumer</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (create-consumer host port &amp; {:keys [timeout buffer-size], :or {timeout 100000, buffer-size 10000}})
-</pre>
-  <pre id="var-docstr">Create a consumer to connect to host and port. Port will
-normally be 9092.</pre>
+  <h2 id="clj-kafka.consumer.simple">clj-kafka.consumer.simple</h2>
+  
+  <a href="clj-kafka.consumer.simple-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr"></pre>
   
   
   
-</div><div id="var-entry">
+  Public variables and functions:
+  <span id="var-link"><a href="clj-kafka.consumer.simple-api.html#clj-kafka.consumer.simple/consumer" id="var-tag">consumer</a> </span><span id="var-link"><a href="clj-kafka.consumer.simple-api.html#clj-kafka.consumer.simple/earliest-offset" id="var-tag">earliest-offset</a> </span><span id="var-link"><a href="clj-kafka.consumer.simple-api.html#clj-kafka.consumer.simple/fetch" id="var-tag">fetch</a> </span><span id="var-link"><a href="clj-kafka.consumer.simple-api.html#clj-kafka.consumer.simple/latest-offsets" id="var-tag">latest-offsets</a> </span><span id="var-link"><a href="clj-kafka.consumer.simple-api.html#clj-kafka.consumer.simple/messages" id="var-tag">messages</a> </span><br />
+  
+</div><div id="namespace-entry">
   <br />
   <hr />
-  <h2 id="clj-kafka.core/fetch">fetch</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (fetch topic partition offset max-size)
-</pre>
-  <pre id="var-docstr">Creates a request to retrieve a set of messages from the
-specified topic.
-
-Arguments:
-partition: as specified when producing messages
-offset: offset to start retrieval
-max-size: number of bytes to retrieve</pre>
+  <h2 id="clj-kafka.consumer.zk">clj-kafka.consumer.zk</h2>
+  
+  <a href="clj-kafka.consumer.zk-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr"></pre>
   
   
   
-</div><div id="var-entry">
+  Public variables and functions:
+  <span id="var-link"><a href="clj-kafka.consumer.zk-api.html#clj-kafka.consumer.zk/consumer" id="var-tag">consumer</a> </span><span id="var-link"><a href="clj-kafka.consumer.zk-api.html#clj-kafka.consumer.zk/messages" id="var-tag">messages</a> </span><span id="var-link"><a href="clj-kafka.consumer.zk-api.html#clj-kafka.consumer.zk/shutdown" id="var-tag">shutdown</a> </span><br />
+  
+</div><div id="namespace-entry">
   <br />
   <hr />
-  <h2 id="clj-kafka.core/messages">messages</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (messages consumer request)
-</pre>
-  <pre id="var-docstr">Creates a sequence of messages from the given request.</pre>
+  <h2 id="clj-kafka.core">clj-kafka.core</h2>
+  
+  <a href="clj-kafka.core-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr"></pre>
   
   
   
-</div><div id="var-entry">
+  Public variables and functions:
+  <span id="var-link"><a href="clj-kafka.core-api.html#clj-kafka.core/to-clojure" id="var-tag">to-clojure</a> </span><br />
+  
+</div><div id="namespace-entry">
   <br />
   <hr />
-  <h2 id="clj-kafka.core/to-clojure">to-clojure</h2>
-  <span id="var-type">function</span><br />
-  <pre id="var-usage">Usage: (to-clojure _)
-</pre>
-  <pre id="var-docstr">Converts type to Clojure structure</pre>
+  <h2 id="clj-kafka.producer">clj-kafka.producer</h2>
+  
+  <a href="clj-kafka.producer-api.html" id="api-link">Detailed API documentation</a><br />
+  <pre id="namespace-docstr"></pre>
   
   
+  
+  Public variables and functions:
+  <span id="var-link"><a href="clj-kafka.producer-api.html#clj-kafka.producer/message" id="var-tag">message</a> </span><span id="var-link"><a href="clj-kafka.producer-api.html#clj-kafka.producer/producer" id="var-tag">producer</a> </span><span id="var-link"><a href="clj-kafka.producer-api.html#clj-kafka.producer/send-messages" id="var-tag">send-messages</a> </span><br />
   
 </div>
-
-
 </div>
               </div>
             </div>

@@ -32,7 +32,12 @@ namespace.
       <li><a class="wiki_link" href="index.html">Overview</a></li>
       <li><a class="wiki_link" href="api-index.html">API Index</a></li>
     </ul>
-    
+    <div class="NamespaceTOC">
+      <span class="toc-header">Namespaces</span>
+      <ul id="left-sidebar-list">
+        <li><a href="clj-kafka.consumer.simple-api.html" class="wiki_link">clj-kafka.consumer.simple</a></li><li><a href="clj-kafka.consumer.zk-api.html" class="wiki_link">clj-kafka.consumer.zk</a></li><li><a href="clj-kafka.core-api.html" class="wiki_link">clj-kafka.core</a></li><li><a href="clj-kafka.producer-api.html" class="wiki_link">clj-kafka.producer</a></li>
+      </ul>
+    </div>
     
     <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
   </div>
@@ -82,7 +87,8 @@ Shortcuts:<br />
 </div><div id="index-body">
   <h2 id="C"><span id="section-head">C</span></h2>
   <pre>
-<span id="section-content"> <a href="index.html#clj-kafka.core/create-consumer">create-consumer</a><span id="line-content">              function      clj-kafka.core     Create a consumer to connect to host and port. Por...
+<span id="section-content"> <a href="clj-kafka.consumer.simple-api.html#clj-kafka.consumer.simple/consumer">consumer</a><span id="line-content">                     function      clj-kafka.consumer.simple Create a consumer to connect to host and po...
+</span></span><span id="section-content"> <a href="clj-kafka.consumer.zk-api.html#clj-kafka.consumer.zk/consumer">consumer</a><span id="line-content">                     function      clj-kafka.consumer.zk Uses information in Zookeeper to connect to Kaf...
 </span></span>
   </pre>
 </div><div id="index-body">
@@ -93,12 +99,13 @@ Shortcuts:<br />
 </div><div id="index-body">
   <h2 id="E"><span id="section-head">E</span></h2>
   <pre>
-
+<span id="section-content"> <a href="clj-kafka.consumer.simple-api.html#clj-kafka.consumer.simple/earliest-offset">earliest-offset</a><span id="line-content">              function      clj-kafka.consumer.simple Retrieves the earliest offset available for...
+</span></span>
   </pre>
 </div><div id="index-body">
   <h2 id="F"><span id="section-head">F</span></h2>
   <pre>
-<span id="section-content"> <a href="index.html#clj-kafka.core/fetch">fetch</a><span id="line-content">                        function      clj-kafka.core     Creates a request to retrieve a set of messages fr...
+<span id="section-content"> <a href="clj-kafka.consumer.simple-api.html#clj-kafka.consumer.simple/fetch">fetch</a><span id="line-content">                        function      clj-kafka.consumer.simple Creates a request to retrieve a set of mess...
 </span></span>
   </pre>
 </div><div id="index-body">
@@ -129,12 +136,15 @@ Shortcuts:<br />
 </div><div id="index-body">
   <h2 id="L"><span id="section-head">L</span></h2>
   <pre>
-
+<span id="section-content"> <a href="clj-kafka.consumer.simple-api.html#clj-kafka.consumer.simple/latest-offsets">latest-offsets</a><span id="line-content">               function      clj-kafka.consumer.simple Retrieves n most recent offsets for topic a...
+</span></span>
   </pre>
 </div><div id="index-body">
   <h2 id="M"><span id="section-head">M</span></h2>
   <pre>
-<span id="section-content"> <a href="index.html#clj-kafka.core/messages">messages</a><span id="line-content">                     function      clj-kafka.core     Creates a sequence of messages from the given requ...
+<span id="section-content"> <a href="clj-kafka.producer-api.html#clj-kafka.producer/message">message</a><span id="line-content">                      function      clj-kafka.producer Creates a message with the specified payload. payl...
+</span></span><span id="section-content"> <a href="clj-kafka.consumer.simple-api.html#clj-kafka.consumer.simple/messages">messages</a><span id="line-content">                     function      clj-kafka.consumer.simple Creates a sequence of messages from the giv...
+</span></span><span id="section-content"> <a href="clj-kafka.consumer.zk-api.html#clj-kafka.consumer.zk/messages">messages</a><span id="line-content">                     function      clj-kafka.consumer.zk Creates a sequence of messages.
 </span></span>
   </pre>
 </div><div id="index-body">
@@ -150,7 +160,8 @@ Shortcuts:<br />
 </div><div id="index-body">
   <h2 id="P"><span id="section-head">P</span></h2>
   <pre>
-
+<span id="section-content"> <a href="clj-kafka.producer-api.html#clj-kafka.producer/producer">producer</a><span id="line-content">                     function      clj-kafka.producer Creates a Producer. m is the configuration seriali...
+</span></span>
   </pre>
 </div><div id="index-body">
   <h2 id="Q"><span id="section-head">Q</span></h2>
@@ -165,12 +176,14 @@ Shortcuts:<br />
 </div><div id="index-body">
   <h2 id="S"><span id="section-head">S</span></h2>
   <pre>
-
+<span id="section-content"> <a href="clj-kafka.producer-api.html#clj-kafka.producer/send-messages">send-messages</a><span id="line-content">                function      clj-kafka.producer Sends a message. topic   : a string msgs    : a si...
+</span></span><span id="section-content"> <a href="clj-kafka.consumer.zk-api.html#clj-kafka.consumer.zk/shutdown">shutdown</a><span id="line-content">                     function      clj-kafka.consumer.zk Closes the connection to Zookeeper and stops co...
+</span></span>
   </pre>
 </div><div id="index-body">
   <h2 id="T"><span id="section-head">T</span></h2>
   <pre>
-<span id="section-content"> <a href="index.html#clj-kafka.core/to-clojure">to-clojure</a><span id="line-content">                   function      clj-kafka.core     Converts type to Clojure structure.
+<span id="section-content"> <a href="clj-kafka.core-api.html#clj-kafka.core/to-clojure">to-clojure</a><span id="line-content">                   function      clj-kafka.core     Converts type to Clojure structure.
 </span></span>
   </pre>
 </div><div id="index-body">

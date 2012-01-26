@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <title>clj-kafka.consumer.zk - clj-kafka API documentation</title>
+    <link href="static/favicon.png" rel="icon" />
+    <link href="static/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
+	<h1><a title="page header title" id="page-header" href="index.html">clj-kafka</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <span class="toc-header"><span id="project-name">clj-kafka</span> <span id="version"></span> API</span><br />
+    <ul>
+      <li><a class="wiki_link" href="index.html">Overview</a></li>
+      <li><a class="wiki_link" href="api-index.html">API Index</a></li>
+    </ul>
+    <div class="NamespaceTOC">
+      <span class="toc-header">Namespaces</span>
+      <ul id="left-sidebar-list">
+        <li><a href="clj-kafka.consumer.simple-api.html" class="wiki_link">clj-kafka.consumer.simple</a></li><li><a href="clj-kafka.consumer.zk-api.html" class="wiki_link">clj-kafka.consumer.zk</a></li><li><a href="clj-kafka.core-api.html" class="wiki_link">clj-kafka.core</a></li><li><a href="clj-kafka.producer-api.html" class="wiki_link">clj-kafka.producer</a></li>
+      </ul>
+    </div>
+    
+    <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-kafka.consumer.zk/consumer">consumer</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-kafka.consumer.zk/messages">messages</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#clj-kafka.consumer.zk/shutdown">shutdown</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">clj-kafka.consumer.zk</span>
+  - <span id="header-project">clj-kafka</span> <span id="header-version"></span>
+  </h1>
+
+<br />Full namespace name: <span id="long-name">clj-kafka.consumer.zk</span>
+<p></p>
+<h2>Overview</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-kafka.consumer.zk/consumer">consumer</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (consumer m)
+</pre>
+  <pre id="var-docstr">Uses information in Zookeeper to connect to Kafka. More info on settings
+ is available here: <a href="http://incubator.apache.org/kafka/configuration.html">http://incubator.apache.org/kafka/configuration.html</a>
+
+ Recommended for using with with-resource:
+ (with-resource [c (consumer m)]
+   shutdown
+   (take 5 (messages c "test")))
+
+ Keys:
+ zk.connect             : host:port for Zookeeper. e.g: 127.0.0.1:2181
+ groupid                : consumer group. e.g. group1
+ zk.sessiontimeout.ms   : session timeout. e.g. 400
+ zk.synctime.ms         : Max time for how far a ZK follower can be behind a ZK leader. 200 ms
+ autocommit.interval.ms : the frequency that the consumed offsets are committed to zookeeper.
+ autocommit.enable      : if set to true, the consumer periodically commits to zookeeper the latest consumed offset of each partition</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-kafka.consumer.zk/messages">messages</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (messages consumer topic)
+</pre>
+  <pre id="var-docstr">Creates a sequence of messages</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="clj-kafka.consumer.zk/shutdown">shutdown</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (shutdown consumer)
+</pre>
+  <pre id="var-docstr">Closes the connection to Zookeeper and stops consuming messages.</pre>
+  
+  
+  
+</div>
+
+
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">No copyright info </div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>
